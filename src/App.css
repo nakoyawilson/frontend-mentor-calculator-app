@@ -54,6 +54,8 @@
   --color-screen: var(--white);
   --attribute-text: var(--white);
   --attribute-link: var(--red);
+  --bg-toggle-switch: var(--dark-desaturated-blue-2);
+  --bg-circle: var(--red);
 }
 
 .theme-two {
@@ -73,6 +75,8 @@
   --color-screen: var(--dark-grayish-yellow);
   --attribute-text: var(--dark-grayish-blue);
   --attribute-link: var(--orange);
+  --bg-toggle-switch: var(--grayish-red);
+  --bg-circle: var(--orange);
 }
 
 .theme-three {
@@ -92,6 +96,8 @@
   --color-screen: var(--light-yellow);
   --attribute-text: var(--light-yellow);
   --attribute-link: var(--pure-cyan);
+  --bg-toggle-switch: var(--very-dark-violet-2);
+  --bg-circle: var(--pure-cyan);
 }
 
 /* CSS Reset */
@@ -137,7 +143,77 @@ header {
   font-size: 1.5rem;
   text-transform: uppercase;
   display: flex;
+  align-items: flex-end;
   gap: 2rem;
+}
+
+.toggle-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+form {
+  display: flex;
+  gap: 1.5rem;
+}
+
+input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+/* Toggle Switch */
+
+.toggle-slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-toggle-switch);
+  -webkit-transition: transform 0.4s;
+  transition: transform 0.4s;
+  border-radius: 3.4rem;
+  width: 7rem;
+  height: 2.5rem;
+}
+
+.circle {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: var(--bg-circle);
+  -webkit-transition: transform 0.4s;
+  transition: transform 0.4s;
+  border-radius: 50%;
+}
+
+.position-two {
+  -webkit-transform: translateX(2.25rem);
+  -ms-transform: translateX(2.25rem);
+  transform: translateX(2.25rem);
+}
+
+.position-three {
+  -webkit-transform: translateX(4.5rem);
+  -ms-transform: translateX(4.5rem);
+  transform: translateX(4.5rem);
 }
 
 /* Screen */
@@ -175,6 +251,10 @@ button {
   font: inherit;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .btn-color-one {
   background-color: var(--bg-btn-one);
   color: var(--color-btn-one);
@@ -186,6 +266,7 @@ button {
   color: var(--color-btn-two);
   box-shadow: 0rem 0.5rem 0 var(--shadow-btn-two);
   text-transform: uppercase;
+  font-size: 2rem;
 }
 
 .btn-color-three {
