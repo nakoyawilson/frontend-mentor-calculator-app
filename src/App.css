@@ -1,9 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  --font: "Spartan", sans-serif;
+  --dark-desaturated-blue-1: hsl(222, 26%, 31%);
+  --dark-desaturated-blue-2: hsl(223, 31%, 20%);
+  --dark-desaturated-blue-3: hsl(224, 36%, 15%);
+  --dark-blue-1: hsl(225, 21%, 49%);
+  --dark-blue-2: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --dark-red: hsl(6, 70%, 34%);
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  --grayish-orange: hsl(28, 16%, 65%);
+  --dark-grayish-blue: hsl(221, 14%, 31%);
+  --light-gray: hsl(0, 0%, 90%);
+  --grayish-red: hsl(0, 5%, 81%);
+  --very-light-gray: hsl(0, 0%, 93%);
+  --moderate-cyan: hsl(185, 42%, 37%);
+  --dark-cyan: hsl(185, 58%, 25%);
+  --orange: hsl(25, 98%, 40%);
+  --dark-orange: hsl(25, 99%, 27%);
+  --light-grayish-yellow: hsl(45, 7%, 89%);
+  --dark-grayish-orange: hsl(35, 11%, 61%);
+  --dark-grayish-yellow: hsl(60, 10%, 19%);
+  --very-dark-violet-1: hsl(268, 75%, 9%);
+  --very-dark-violet-2: hsl(268, 71%, 12%);
+  --very-dark-violet-3: hsl(268, 47%, 21%);
+  --dark-violet: hsl(281, 89%, 26%);
+  --vivid-magenta: hsl(285, 91%, 52%);
+  --pure-cyan: hsl(176, 100%, 44%);
+  --soft-cyan: hsl(177, 92%, 70%);
+  --dark-magenta: hsl(290, 70%, 36%);
+  --light-yellow: hsl(52, 100%, 62%);
+  --dark-blue-3: hsl(198, 20%, 13%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Themes */
+
+.theme-one {
+  --bg-main: var(--dark-desaturated-blue-1);
+  --color-header: var(--white);
+  --bg-keypad: var(--dark-desaturated-blue-2);
+  --bg-btn-one: var(--light-grayish-orange);
+  --bg-btn-two: var(--dark-blue-1);
+  --bg-btn-three: var(--red);
+  --color-btn-one: var(--dark-grayish-blue);
+  --color-btn-two: var(--white);
+  --color-btn-three: var(--white);
+  --shadow-btn-one: var(--grayish-orange);
+  --shadow-btn-two: var(--dark-blue-2);
+  --shadow-btn-three: var(--dark-red);
+  --bg-screen: var(--dark-desaturated-blue-3);
+  --color-screen: var(--white);
+  --attribute-text: var(--white);
+  --attribute-link: var(--red);
+}
+
+.theme-two {
+  --bg-main: var(--light-gray);
+  --color-header: var(--dark-grayish-blue);
+  --bg-keypad: var(--grayish-red);
+  --bg-btn-one: var(--light-grayish-yellow);
+  --bg-btn-two: var(--moderate-cyan);
+  --bg-btn-three: var(--orange);
+  --color-btn-one: var(--dark-grayish-yellow);
+  --color-btn-two: var(--white);
+  --color-btn-three: var(--white);
+  --shadow-btn-one: var(--dark-grayish-orange);
+  --shadow-btn-two: var(--dark-cyan);
+  --shadow-btn-three: var(--dark-orange);
+  --bg-screen: var(--very-light-gray);
+  --color-screen: var(--dark-grayish-yellow);
+  --attribute-text: var(--dark-grayish-blue);
+  --attribute-link: var(--orange);
+}
+
+.theme-three {
+  --bg-main: var(--very-dark-violet-1);
+  --color-header: var(--light-yellow);
+  --bg-keypad: var(--very-dark-violet-2);
+  --bg-btn-one: var(--very-dark-violet-3);
+  --bg-btn-two: var(--dark-violet);
+  --bg-btn-three: var(--pure-cyan);
+  --color-btn-one: var(--light-yellow);
+  --color-btn-two: var(--white);
+  --color-btn-three: var(--dark-blue-3);
+  --shadow-btn-one: var(--dark-magenta);
+  --shadow-btn-two: var(--vivid-magenta);
+  --shadow-btn-three: var(--soft-cyan);
+  --bg-screen: var(--very-dark-violet-2);
+  --color-screen: var(--light-yellow);
+  --attribute-text: var(--light-yellow);
+  --attribute-link: var(--pure-cyan);
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--bg-main);
+  font-family: var(--font);
+  font-size: 3.2rem;
+}
+
+.App {
+  width: min(87.3333%, 54rem);
+  margin-inline: auto;
+}
+
+/* Header */
+
+header {
+  color: var(--color-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 3.25rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.theme-wrapper {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Screen */
+
+.screen {
+  background: var(--bg-screen);
+  color: var(--color-screen);
+  text-align: right;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 10px;
+}
+
+/* Keypad */
+
+.keypad-grid {
+  padding: 2.5rem;
+  background: var(--bg-keypad);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 6.5rem);
+  gap: 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.two-columns {
+  grid-column: span 2;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font: inherit;
+}
+
+.btn-color-one {
+  background-color: var(--bg-btn-one);
+  color: var(--color-btn-one);
+  box-shadow: 0rem 0.5rem 0 var(--shadow-btn-one);
+}
+
+.btn-color-two {
+  background-color: var(--bg-btn-two);
+  color: var(--color-btn-two);
+  box-shadow: 0rem 0.5rem 0 var(--shadow-btn-two);
+  text-transform: uppercase;
+}
+
+.btn-color-three {
+  background-color: var(--bg-btn-three);
+  color: var(--color-btn-three);
+  box-shadow: 0rem 0.5rem 0 var(--shadow-btn-three);
+}
+
 /* Footer */
 
 .attribution {
-  font-size: 11px;
+  color: var(--attribute-text);
+  font-size: 1.1rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--attribute-link);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (min-width: 650px) {
+  /* Header */
+
+  header {
+    margin-top: 10rem;
+  }
+
+  /* Screen */
+
+  .screen {
+    padding: 3.75rem;
+  }
+
+  /* Keypad */
+
+  .keypad-grid {
+    padding: 3.75rem;
+    gap: 2.25rem;
+    margin-bottom: 9.75rem;
+  }
 }
