@@ -28,6 +28,7 @@ const Calculator = (props) => {
           buttonID="delete"
           buttonClasses="btn-color-two"
           buttonValue="Del"
+          handleButtonClick={props.handleDelete}
         />
         <Button
           buttonID="number-four"
@@ -47,7 +48,12 @@ const Calculator = (props) => {
           buttonValue="6"
           handleButtonClick={props.handleNumberClick}
         />
-        <Button buttonID="add" buttonClasses="btn-color-one" buttonValue="+" />
+        <Button
+          buttonID="add"
+          buttonClasses="btn-color-one"
+          buttonValue="+"
+          handleButtonClick={props.handleOperatorClick}
+        />
         <Button
           buttonID="number-one"
           buttonClasses="btn-color-one"
@@ -70,6 +76,7 @@ const Calculator = (props) => {
           buttonID="subtract"
           buttonClasses="btn-color-one"
           buttonValue="-"
+          handleButtonClick={props.handleOperatorClick}
         />
         <Button
           buttonID="decimal-point"
@@ -87,11 +94,13 @@ const Calculator = (props) => {
           buttonID="divide"
           buttonClasses="btn-color-one"
           buttonValue="/"
+          handleButtonClick={props.handleOperatorClick}
         />
         <Button
           buttonID="multiply"
           buttonClasses="btn-color-one"
           buttonValue="x"
+          handleButtonClick={props.handleOperatorClick}
         />
         <Button
           buttonID="reset"
@@ -103,6 +112,7 @@ const Calculator = (props) => {
           buttonID="equal"
           buttonClasses="two-columns btn-color-three"
           buttonValue="="
+          handleButtonClick={props.handleCalculation}
         />
       </div>
     </main>
