@@ -1,7 +1,7 @@
-const Screen = () => {
+const Screen = (props) => {
   return (
     <section className="screen">
-      <h2>0</h2>
+      <h2>{props.screenDisplay}</h2>
     </section>
   );
 };

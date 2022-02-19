@@ -2,11 +2,11 @@ const Header = (props) => {
   return (
     <header>
       <h1 className="title">calc</h1>
-      <div class="theme-wrapper">
+      <div className="theme-wrapper">
         <div>
-          <span class="theme">Theme</span>
+          <span className="theme">Theme</span>
         </div>
-        <div class="toggle-wrapper">
+        <div className="toggle-wrapper">
           <form onChange={props.handleThemeChange}>
             <input
               type="radio"
@@ -20,8 +20,8 @@ const Header = (props) => {
             <input type="radio" name="themes" id="theme-three" />
             <label htmlFor="theme-three">3</label>
           </form>
-          <span class="toggle-slider">
-            <span class={`circle ${props.toggleCircleClass}`}></span>
+          <span className="toggle-slider">
+            <span className={`circle ${props.toggleCircleClass}`}></span>
           </span>
         </div>
       </div>

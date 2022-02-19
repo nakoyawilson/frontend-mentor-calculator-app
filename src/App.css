@@ -118,6 +118,7 @@ body {
   background: var(--bg-main);
   font-family: var(--font);
   font-size: 3.2rem;
+  font-weight: 700;
 }
 
 .App {
@@ -137,14 +138,22 @@ header {
 
 .title {
   font-size: 3rem;
+  margin-bottom: -1rem;
+  letter-spacing: 0.01em;
 }
 
 .theme-wrapper {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   display: flex;
   align-items: flex-end;
-  gap: 2rem;
+  gap: 2.25rem;
+}
+
+.theme {
+  display: block;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
 }
 
 .toggle-wrapper {
@@ -225,6 +234,7 @@ label:hover {
   padding: 2.5rem;
   margin-bottom: 2.5rem;
   border-radius: 10px;
+  font-size: 3.1rem;
 }
 
 /* Keypad */
@@ -234,7 +244,7 @@ label:hover {
   background: var(--bg-keypad);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 6.5rem);
+  grid-template-rows: repeat(5, 5.9rem);
   gap: 1.25rem;
   border-radius: 10px;
   margin-bottom: 3rem;
@@ -249,6 +259,7 @@ button {
   border-radius: 8px;
   width: 100%;
   font: inherit;
+  padding-top: 0.7rem;
 }
 
 button:hover {
@@ -258,13 +269,13 @@ button:hover {
 .btn-color-one {
   background-color: var(--bg-btn-one);
   color: var(--color-btn-one);
-  box-shadow: 0rem 0.5rem 0 var(--shadow-btn-one);
+  box-shadow: 0rem 0.3rem 0 var(--shadow-btn-one);
 }
 
 .btn-color-two {
   background-color: var(--bg-btn-two);
   color: var(--color-btn-two);
-  box-shadow: 0rem 0.5rem 0 var(--shadow-btn-two);
+  box-shadow: 0rem 0.3rem 0 var(--shadow-btn-two);
   text-transform: uppercase;
   font-size: 2rem;
 }
@@ -272,7 +283,9 @@ button:hover {
 .btn-color-three {
   background-color: var(--bg-btn-three);
   color: var(--color-btn-three);
-  box-shadow: 0rem 0.5rem 0 var(--shadow-btn-three);
+  box-shadow: 0rem 0.3rem 0 var(--shadow-btn-three);
+  font-size: 2rem;
+  padding-top: 0.6rem;
 }
 
 /* Footer */
@@ -296,20 +309,21 @@ button:hover {
   /* Header */
 
   header {
-    margin-top: 10rem;
+    margin-top: 9.6rem;
   }
 
   /* Screen */
 
   .screen {
-    padding: 3.75rem;
+    padding: 3.6rem 3.2rem;
   }
 
   /* Keypad */
 
   .keypad-grid {
-    padding: 3.75rem;
-    gap: 2.25rem;
-    margin-bottom: 9.75rem;
+    padding: 3.25rem 3.25rem 3.5rem 3.1rem;
+    column-gap: 2.25rem;
+    row-gap: 2.9rem;
+    margin-bottom: 8rem;
   }
 }
