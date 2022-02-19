@@ -12,18 +12,16 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
   - [Built with](#built-with)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
 
 Users should be able to:
 
-- See the size of the elements adjust based on their device's screen size
-- Perform mathmatical operations like addition, subtraction, multiplication, and division
-- Adjust the color theme based on their preference
-- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
+- [x] See the size of the elements adjust based on their device's screen size
+- [x] Perform mathmatical operations like addition, subtraction, multiplication, and division
+- [x] Adjust the color theme based on their preference
+- [ ]**Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
 
@@ -41,6 +39,10 @@ Users should be able to:
 - CSS
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+
+### Useful Resources
+
+-[How to print a number with commas as thousands separators in JavaScript - Stack Overflow](https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript)
 
 ## Author
 
