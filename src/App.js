@@ -5,15 +5,14 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
-  // const [bodyClass, setBodyClass] = useState(
-  //   localStorage.getItem("nw-fem-calculator")
-  //     ? localStorage.getItem("nw-fem-calculator")
-  //     : window.matchMedia &&
-  //       window.matchMedia("(prefers-color-scheme: dark)").matches
-  //     ? "theme-one"
-  //     : "theme-two"
-  // );
-  const [bodyClass, setBodyClass] = useState("theme-one");
+  const [bodyClass, setBodyClass] = useState(
+    localStorage.getItem("nw-fem-calculator")
+      ? localStorage.getItem("nw-fem-calculator")
+      : window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "theme-one"
+      : "theme-two"
+  );
   const [switchPosition, setSwitchPosition] = useState(
     bodyClass === "theme-one"
       ? ""
@@ -21,8 +20,7 @@ const App = () => {
       ? "position-two"
       : "position-three"
   );
-  // const [screenDisplay, setScreenDisplay] = useState("0");
-  const [screenDisplay, setScreenDisplay] = useState("399,981");
+  const [screenDisplay, setScreenDisplay] = useState("0");
   const [calcArray, setCalcArray] = useState([]);
 
   // Set initial color theme
