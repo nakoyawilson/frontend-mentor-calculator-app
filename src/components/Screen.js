@@ -1,7 +1,11 @@
-const Screen = (props) => {
+const Screen = ({ screenDisplay }) => {
   return (
     <section className="screen">
-      <h2>{props.screenDisplay}</h2>
+      <h2>
+        {screenDisplay.length <= 15
+          ? screenDisplay
+          : screenDisplay.substring(0, 15)}
+      </h2>
     </section>
   );
 };
